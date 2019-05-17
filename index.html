@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive circle CSS</title>
+<style>
+  .circle{
+      background-image:url("https://cdn.independent-photo.com/wp-content/uploads/2017/11/18.Greece-1800x1200.jpg");
+      width:50%;
+      border-radius:50%;
+      border:2px solid #000;
+      box-shadow:0 0 10px #000;
+      background-size: cover;
+      background-position: center;
+      margin:72px auto;
+    }
+    .circle:after{
+      content:"";
+      display: block;
+      padding-bottom:100%;
+    }
+</style>
+</head>
+<body>
+	<div class="circle"></div>
+</body>
+</html>
