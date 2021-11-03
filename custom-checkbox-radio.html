@@ -1,0 +1,117 @@
+<!-- simple-css-radio-chackbox -->
+<!DOCTYPE html>
+<html>
+<style>
+.checkbox__container,
+.radio__container{
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox__container input,
+.radio__container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/*Checkbox Design*/
+.checkbox__container .checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.checkbox__container:hover input ~ .checkmark{
+  background-color: #cccccc;
+}
+
+.checkbox__container input:checked ~ .checkmark{
+  background-color: #2196F3;
+}
+.checkbox__container .checkmark:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox__container input:checked ~ .checkmark:after{
+  display: block;
+}
+.checkbox__container .checkmark:after{
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 1.5px 2px 0;
+  transform: rotate(45deg);
+}
+
+/*Radio Input Design*/
+.radio__container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.radio__container:hover input ~ .checkmark{
+  background-color: #cccccc;
+}
+.radio__container input:checked ~ .checkmark{
+  background-color: #2196F3;
+}
+.radio__container .checkmark:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio__container input:checked ~ .checkmark:after{
+  display: block;
+}
+.radio__container .checkmark:after{
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  top: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+</style>
+<body>
+  <h1>Css Checkboxes</h1>
+  <label class="checkbox__container">One
+    <input type="checkbox" checked="checked">
+    <span class="checkmark"></span>
+  </label>
+  <label class="checkbox__container">Two
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  
+  <hr/>
+  
+  <h1>Css Radio Inputs</h1>
+  <label class="radio__container">Male
+    <input type="radio" name="radio" checked="checked">
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio__container">Female
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+  </label>
+</body>
+</html>
